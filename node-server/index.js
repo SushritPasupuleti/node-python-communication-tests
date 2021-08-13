@@ -26,6 +26,11 @@ amqp.connect('amqp://localhost:5672', function (error0, connection) {
 
     });
 
+    setTimeout(function() {
+        connection.close();
+        // process.exit(0)
+        }, 500);
+
 });
 
 app.get('/', (req, res) => {
