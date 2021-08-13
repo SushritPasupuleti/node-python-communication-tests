@@ -6,8 +6,9 @@ app.get('/', (req, res) => {
     res.send('Hello There')
 })
 
-app.get('/pi', async(req, res) => {
-    const data = await fetch('http://localhost:7000/pi/4000')
+app.get('/pi/:num', async(req, res) => {
+    console.log("Params: ", req.params.num)
+    const data = await fetch(`http://localhost:7000/pi/${req.params.num}`)
     const pi = await data.json();
     res.send({"message": pi.message})
 })
