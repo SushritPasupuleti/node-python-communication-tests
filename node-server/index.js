@@ -52,9 +52,9 @@ app.get('/pi-r/:num', async (req, res) => {
         channel.sendToQueue(queue, Buffer(JSON.stringify(msg)));
         console.log(" [x] Sent %s", msg);
 
-        channel.consume(results, function (msg) {
-            res.send(msg.content.toString())
-          }, { noAck: true });
+        // channel.consume(results, function (msg) {
+        //     res.send(msg.content.toString())
+        //   }, { noAck: true });
 
     });
 
