@@ -58,6 +58,7 @@ app.get('/pi-r/:num', async (req, res) => {
         console.log(" [x] Sent %s", msg);
 
         channel.consume(queueResults, function (msg) {
+            console.log("Recieved: ", msg.content.toString())
             res.send(msg.content.toString())
           }, { noAck: true });
 
