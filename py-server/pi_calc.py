@@ -40,7 +40,7 @@ def main():  # Wrapper function
 
     # Calls CalcPi with the given limit
     print("Running Pi Calculations")
-    pi_digits = calcPi(int(99999999999999999999999999999999999999999))
+    pi_digits = calcPi(int(999))
 
     i = 0
 
