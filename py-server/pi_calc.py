@@ -53,4 +53,7 @@ def main(num: int):  # Wrapper function
     #         print("")
     #         i = 0
 
-    return pi_digits
+    # convert to string
+    output = ''.join(pi_digits)
+
+    return output
