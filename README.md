@@ -38,7 +38,7 @@ docker run -d --hostname my-rabbit --name some-rabbit rabbitmq:3
 
 Access CLI
 
-```
+```bash
 docker exec -it some-rabbit bash
 rabbitmqctl
 ```
