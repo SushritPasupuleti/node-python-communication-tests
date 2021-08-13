@@ -45,9 +45,11 @@ def main():  # Wrapper function
 
     # Prints the output of calcPi generator function
     # Inserts a newline after every 40th number
-    for d in pi_digits:
-        print(d, end='')
-        i += 1
-        if i == 40:
-            print("")
-            i = 0
+    # for d in pi_digits:
+    #     print(d, end='')
+    #     i += 1
+    #     if i == 40:
+    #         print("")
+    #         i = 0
+
+    return pi_digits
