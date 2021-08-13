@@ -42,19 +42,24 @@ app.get('/pi-r/:num', async (req, res) => {
             console.log("Error in Channel Creation")
             throw error1;
         }
-        var queue = 'bunny🐰';
+        var queueProducer = 'bunny🐰';
+        var queueResults = 'bunny🐰nom';
         var msg = {message: 'Hello There', num: req.params.num};
 
-        channel.assertQueue(queue, {
+        channel.assertQueue(queueProducer, {
             durable: false
         });
 
-        channel.sendToQueue(queue, Buffer(JSON.stringify(msg)));
+        channel.assertQueue(queueResults, {
+            durable: false
+        });
+
+        channel.sendToQueue(queueProducer, Buffer(JSON.stringify(msg)));
         console.log(" [x] Sent %s", msg);
 
-        // channel.consume(results, function (msg) {
-        //     res.send(msg.content.toString())
-        //   }, { noAck: true });
+        channel.consume(queueResults, function (msg) {
+            res.send(msg.content.toString())
+          }, { noAck: true });
 
     });
 
