@@ -15,7 +15,7 @@ amqp.connect('amqp://localhost:5672', function (error0, connection) {
             throw error1;
         }
         var queue = 'hello';
-        var msg = 'Hello world';
+        var msg = {message: 'Hello world'};
 
         channel.assertQueue(queue, {
             durable: false
