@@ -50,7 +50,7 @@ uvicorn main:app --reload
 
 ## Benchmarking
 
-We calculate `n` digits of pi through python. In my case I'll set n to `4000`
+We calculate `n` digits of pi through python.
 
 ## Results
 
@@ -67,3 +67,10 @@ Test with `n` = 5000
 | --------------- | ------------- |
 | fastapi         | 1845 - 1940ms |
 | express+fastapi | 1840 - 1845ms |
+
+Test with `n` = 50000
+
+| name            | time(ms)      |
+| --------------- | ------------- |
+| fastapi         | ms |
+| express+fastapi | ms |
