@@ -1,6 +1,6 @@
 # node-python-communication-tests
 
- Trying out different strategies to establish communication between Node and Python
+Trying out different strategies to establish communication between Node and Python
 
 ## Setup
 
@@ -15,7 +15,7 @@ python3 -m venv pyvenv
 To Activate
 
 ```bash
-source pyvenv/bin/activate 
+source pyvenv/bin/activate
 ```
 
 To Create `requirements.txt`
@@ -54,7 +54,7 @@ We calculate `n` digits of pi through python. In my case I'll set n to `4000`
 
 ## Results
 
-| name | time(ms) |
-|------|----------|
-| fastapi     | ~2.33s         |
-|      |          |
+| name    | time(ms) |
+| ------- | -------- |
+| fastapi | ~2.33s   |
+|         |          |
