@@ -47,3 +47,9 @@ source pyvenv/bin/activate
 cd py-server
 uvicorn main:app --reload
 ```
+
+## Benchmarking
+
+We calculate `n` digits of pi through python. In my case I'll set n to `4000`
+
+## Results
