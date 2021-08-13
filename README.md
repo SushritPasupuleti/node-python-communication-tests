@@ -33,7 +33,7 @@ pip3 install -r requirements.txt
 Setup RabbitMQ
 
 ```bash
-docker run -d -p 15672:15672 --hostname my-rabbit --name some-rabbit rabbitmq:3.8-management
+docker run -d -p 15672:15672 -p 5672:5672 -p 25672:25672 -p 15692:15692 --hostname my-rabbit --name some-rabbit rabbitmq:3.8-management
 ```
 
 Access CLI
