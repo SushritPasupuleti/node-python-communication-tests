@@ -56,7 +56,7 @@ We calculate `n` digits of pi through python. In my case I'll set n to `4000`
 
 Test with `n` = 4000
 
-| name            | time(ms)   |
-| --------------- | ---------- |
+| name            | time(ms)      |
+| --------------- | ------------- |
 | fastapi         | 1160 - 1175ms |
-| express+fastapi | 1160 - 1225ms   |
+| express+fastapi | 1160 - 1225ms |
