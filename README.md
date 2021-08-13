@@ -43,6 +43,12 @@ docker exec -it some-rabbit bash
 rabbitmqctl
 ```
 
+List Plugins
+
+```bash
+rabbitmq-plugins list
+```
+
 ## Running
 
 Node Server
