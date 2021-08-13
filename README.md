@@ -91,7 +91,7 @@ Test with `n` = 4000
 | --------------- | ------------- |
 | fastapi         | 1160 - 1175ms |
 | express+fastapi | 1160 - 1225ms |
-| rabbitmq        | ms            |
+| rabbitmq        | 59ms            |
 
 Test with `n` = 5000
 
@@ -99,7 +99,7 @@ Test with `n` = 5000
 | --------------- | ------------- |
 | fastapi         | 1845 - 1940ms |
 | express+fastapi | 1840 - 1845ms |
-| rabbitmq        | ms            |
+| rabbitmq        | 70ms            |
 
 Test with `n` = 50000
 
@@ -107,4 +107,4 @@ Test with `n` = 50000
 | --------------- | -------- |
 | fastapi         | 222000ms |
 | express+fastapi | 222000ms |
-| rabbitmq        | ms       |
+| rabbitmq        | 44ms       |

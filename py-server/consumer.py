@@ -15,9 +15,9 @@ def main():
         data = body.decode()
         data = json.loads(data)
 
-        results = calc(int(data['num']))
+        print("NUM: ", int(data['num']))
 
-        print("Result: ", results)
+        results = calc(int(data['num']))
 
         channel.basic_publish(exchange='',
                           routing_key='bunny🐰nom',
