@@ -59,7 +59,7 @@ def main(num: int):  # Wrapper function
     # output = pi_digits
     output = ''.join(pi_digits)
 
-    print("OP: " + output)
+    print("OP Ready")
     return output
 
 
