@@ -52,7 +52,7 @@ rabbitmq-plugins list
 Enable Management
 
 ```bash
-rabbitmq-plugins enable rabbitmq-management
+rabbitmq-plugins enable rabbitmq_management
 ```
 
 ## Running
