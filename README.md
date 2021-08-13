@@ -53,3 +53,8 @@ uvicorn main:app --reload
 We calculate `n` digits of pi through python. In my case I'll set n to `4000`
 
 ## Results
+
+| name | time(ms) |
+|------|----------|
+| fastapi     | ~2.33s         |
+|      |          |
