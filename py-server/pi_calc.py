@@ -59,6 +59,9 @@ def main(num: int):  # Wrapper function
 
     return output
 
+
 if __name__ == "__main__":
     import sys
-    main(sys.argv[1])
+    results = main(sys.argv[1])
+    print(str(results))
+    sys.stdout.flush()
