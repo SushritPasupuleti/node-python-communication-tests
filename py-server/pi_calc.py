@@ -1,3 +1,5 @@
+import sys
+
 def calcPi(limit):  # Generator function
     """
     Prints out the digits of PI
@@ -18,7 +20,7 @@ def calcPi(limit):  # Generator function
                 yield '.'
             # end
             if decimal == counter:
-                print('')
+                # print('')
                 break
             counter += 1
             nr = 10 * (r - n * t)
@@ -57,11 +59,11 @@ def main(num: int):  # Wrapper function
     # output = pi_digits
     output = ''.join(pi_digits)
 
+    # print("OP: " + output)
     return output
 
 
 if __name__ == "__main__":
-    import sys
     results = main(sys.argv[1])
-    print(str(results))
+    print(results)
     sys.stdout.flush()
