@@ -60,3 +60,10 @@ Test with `n` = 4000
 | --------------- | ------------- |
 | fastapi         | 1160 - 1175ms |
 | express+fastapi | 1160 - 1225ms |
+
+Test with `n` = 5000
+
+| name            | time(ms)      |
+| --------------- | ------------- |
+| fastapi         | 1845 - 1940ms |
+| express+fastapi | 1840 - 1845ms |
