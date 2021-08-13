@@ -3,36 +3,6 @@ var app = express();
 var fetch = require('node-fetch');
 var amqp = require('amqplib/callback_api');
 
-amqp.connect('amqp://localhost:5672', function (error0, connection) {
-    if (error0) {
-        console.log("Error")
-        throw error0;
-    }
-    console.log("Connection Successfull")
-    connection.createChannel(function (error1, channel) {
-        if (error1) {
-            console.log("Error in Channel Creation")
-            throw error1;
-        }
-        var queue = 'hello';
-        var msg = {message: 'Hello There'};
-
-        channel.assertQueue(queue, {
-            durable: false
-        });
-
-        channel.sendToQueue(queue, Buffer(JSON.stringify(msg)));
-        console.log(" [x] Sent %s", msg);
-
-    });
-
-    setTimeout(function() {
-        connection.close();
-        // process.exit(0)
-        }, 500);
-
-});
-
 app.get('/', (req, res) => {
     res.send('Hello There')
 })
@@ -61,21 +31,39 @@ app.get('/pi-s/:num', async (req, res) => {
 
 app.get('/pi-r/:num', async (req, res) => {
     console.log("Param num: ", req.params.num)
-    amqp.connect('amqp://localhost:5672', function (err, conn) {
-        conn.createChannel(function (err, ch) {
-            var simulations = 'simulations';
-            ch.assertQueue(simulations, { durable: false });
-            var results = 'results';
-            ch.assertQueue(results, { durable: false });
+    amqp.connect('amqp://localhost:5672', function (error0, connection) {
+    if (error0) {
+        console.log("Error")
+        throw error0;
+    }
+    console.log("Connection Successfull")
+    connection.createChannel(function (error1, channel) {
+        if (error1) {
+            console.log("Error in Channel Creation")
+            throw error1;
+        }
+        var queue = 'hello';
+        var msg = {message: 'Hello There', num: req.params.num};
 
-            ch.sendToQueue(simulations, new Buffer(JSON.stringify(req.params.num)));
-
-            ch.consume(results, function (msg) {
-                res.send(msg.content.toString())
-            }, { noAck: true });
+        channel.assertQueue(queue, {
+            durable: false
         });
-        setTimeout(function () { conn.close(); }, 500);
+
+        channel.sendToQueue(queue, Buffer(JSON.stringify(msg)));
+        console.log(" [x] Sent %s", msg);
+
+        channel.consume(results, function (msg) {
+            res.send(msg.content.toString())
+          }, { noAck: true });
+
     });
+
+    setTimeout(function() {
+        connection.close();
+        // process.exit(0)
+        }, 500);
+
+});
 })
 
 
