@@ -30,10 +30,17 @@ To Install Requirements
 pip3 install -r requirements.txt
 ```
 
-### Setup RabbitMQ
+Setup RabbitMQ
 
 ```bash
 docker run -d --hostname my-rabbit --name some-rabbit rabbitmq:3
+```
+
+Access CLI
+
+```
+docker exec -it some-rabbit bash
+rabbitmqctl
 ```
 
 ## Running
