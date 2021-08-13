@@ -39,7 +39,7 @@ def calcPi(limit):  # Generator function
 def main(num: int):  # Wrapper function
 
     # Calls CalcPi with the given limit
-    print("Running Pi Calculations")
+    # print("Running Pi Calculations")
     pi_digits = calcPi(num)
 
     i = 0
