@@ -58,3 +58,7 @@ def main(num: int):  # Wrapper function
     output = ''.join(pi_digits)
 
     return output
+
+if __name__ == "__main__":
+    import sys
+    main(sys.argv[1])
