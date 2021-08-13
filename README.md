@@ -1,5 +1,7 @@
 # node-python-communication-tests
+
  Trying out different strategies to establish communication between Node and Python
+
 ## Setup
 
 Run the following commands
@@ -26,4 +28,22 @@ To Install Requirements
 
 ```bash
 pip3 install -r requirements.txt
+```
+
+## Running
+
+Node Server
+
+```bash
+yarn
+cd node-server
+nodemon
+```
+
+Python Server
+
+```bash
+source pyvenv/bin/activate
+cd py-server
+uvicorn main:app --reload
 ```
