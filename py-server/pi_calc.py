@@ -12,7 +12,7 @@ def calcPi(limit):  # Generator function
     while counter != decimal + 1:
         if 4 * q + r - t < n * t:
             # yield digit
-            yield n
+            yield str(n)
             # insert period after first digit
             if counter == 0:
                 yield '.'
@@ -55,6 +55,6 @@ def main(num: int):  # Wrapper function
 
     # convert to string
     # output = pi_digits
-    output = ''.join([chr(x) for x in pi_digits])
+    output = ''.join(pi_digits)
 
     return output
