@@ -13,8 +13,9 @@ def main():
         print(" [x] Received %r" % body.decode())
 
         data = body.decode()
+        data = json.loads(data)
 
-        results = calc(data.num)
+        results = calc(int(data['num']))
 
         print("Result: ", results)
 
