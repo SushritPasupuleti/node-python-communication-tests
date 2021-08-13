@@ -1,5 +1,6 @@
 import pika, sys, os
 from pi_calc import main as calc
+import json
 
 def main():
     connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost'))
@@ -13,9 +14,13 @@ def main():
 
         data = body.decode()
 
-        result = calc(data.num)
+        results = calc(data.num)
 
-        print("Result: ", result)
+        print("Result: ", results)
+
+        channel.basic_publish(exchange='',
+                          routing_key='bunny🐰nom',
+                          body=json.dumps(results, ensure_ascii=False))
         
 
     channel.basic_consume(queue='bunny🐰', on_message_callback=callback, auto_ack=True)
