@@ -55,6 +55,12 @@ Enable Management
 rabbitmq-plugins enable rabbitmq_management
 ```
 
+List Queues
+
+```bash
+rabbitmqctl list_queues
+```
+
 ## Running
 
 Node Server
