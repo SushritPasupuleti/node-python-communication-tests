@@ -54,7 +54,7 @@ We calculate `n` digits of pi through python. In my case I'll set n to `4000`
 
 ## Results
 
-| name    | time(ms) |
-| ------- | -------- |
-| fastapi | ~2.33s   |
-|         |          |
+| name            | time(ms)   |
+| --------------- | ---------- |
+| fastapi         | 1160 - 1175ms |
+| express+fastapi | 1160 - 1225ms   |
