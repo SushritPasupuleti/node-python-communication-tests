@@ -42,7 +42,7 @@ app.get('/pi-r/:num', async (req, res) => {
             console.log("Error in Channel Creation")
             throw error1;
         }
-        var queue = 'hello';
+        var queue = 'bunny🐰';
         var msg = {message: 'Hello There', num: req.params.num};
 
         channel.assertQueue(queue, {
