@@ -3,3 +3,4 @@ node_modules/
 py-server/__pycache__/pi_calc.cpython-39.pyc
 *.pyc
 *.pyc
+py-server/__pycache__/main.cpython-39.pyc
