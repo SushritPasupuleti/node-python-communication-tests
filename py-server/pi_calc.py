@@ -54,6 +54,7 @@ def main(num: int):  # Wrapper function
     #         i = 0
 
     # convert to string
-    output = ''.join(pi_digits)
+    # output = pi_digits
+    output = ''.join([chr(x) for x in pi_digits])
 
     return output
