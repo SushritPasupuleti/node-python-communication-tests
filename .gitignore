@@ -1,2 +1,4 @@
 pyvenv/
 node_modules/
+py-server/__pycache__/pi_calc.cpython-39.pyc
+*.pyc
