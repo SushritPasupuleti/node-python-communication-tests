@@ -12,4 +12,5 @@ def read_root():
 
 @app.get("/pi")
 def get_pi():
-    return {"message": "Hello There"}
+    pi = calc()
+    return {"message": "Got Pi Value: {pi}"}
