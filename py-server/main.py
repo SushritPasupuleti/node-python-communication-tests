@@ -10,7 +10,7 @@ app = FastAPI()
 def read_root():
     return {"message": "Hello There"}
 
-@app.get("/pi")
-def get_pi():
-    pi = calc()
+@app.get("/pi/{num}")
+def get_pi(num: int):
+    pi = calc(num)
     return {"message": pi}
